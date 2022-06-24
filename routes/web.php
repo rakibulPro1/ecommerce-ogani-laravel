@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\FrontendController;
@@ -37,5 +38,14 @@ Route::post('/admin-login', [AdminController::class, 'adminLogin'])->name('admin
 
 Route::group(['middleware'=> 'admin'], function(){
     Route::get('/admin/dashboard', [DashboardController::class, 'showDashboard'])->name('dashboard');
+    // ======== Category Route ======== 
+    Route::get('/admin/category', [CategoryController::class, 'index'])->name('admin.category');
+    Route::post('/admin/store-category', [CategoryController::class, 'store'])->name('store.category');
+    Route::get('/admin/categories/edit/{cat_id}', [CategoryController::class, 'edit']);
+    Route::post('/admin/update-category', [CategoryController::class, 'update'])->name('update.category');
+    Route::get('/admin/categories/delete/{cat_id}', [CategoryController::class, 'delete']);
+
+
+
 });
 require __DIR__.'/auth.php';

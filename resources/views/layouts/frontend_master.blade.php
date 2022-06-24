@@ -25,15 +25,13 @@
 
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
+   
 
     <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
-            <a href="#"><img src="{{ asset('frontent') }}/img/logo.png" alt=""></a>
+            <a href="#"><img src="{{ asset('frontend') }}/img/logo.png" alt=""></a>
         </div>
         <div class="humberger__menu__cart">
             <ul>
@@ -44,7 +42,7 @@
         </div>
         <div class="humberger__menu__widget">
             <div class="header__top__right__language">
-                <img src="{{ asset('frontent') }}/img/language.png" alt="">
+                <img src="{{ asset('frontend') }}/img/language.png" alt="">
                 <div>English</div>
                 <span class="arrow_carrot-down"></span>
                 <ul>
@@ -110,7 +108,7 @@
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
                             <div class="header__top__right__language">
-                                <img src="{{ asset('frontent') }}/img/language.png" alt="">
+                                <img src="{{ asset('frontend') }}/img/language.png" alt="">
                                 <div>English</div>
                                 <span class="arrow_carrot-down"></span>
                                 <ul>
@@ -130,7 +128,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="{{ asset('frontent') }}/img/logo.png" alt=""></a>
+                        <a href="./index.html"><img src="{{ asset('frontend') }}/img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -168,6 +166,42 @@
     </header>
     <!-- Header Section End -->
 
+    
+    <!-- Categories Section Begin -->
+    <section class="categories">
+        <div class="container">
+            <div class="row">
+                <div class="categories__slider owl-carousel">
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="{{ asset('frontend') }}/img/categories/cat-1.jpg">
+                            <h5><a href="#">Fresh Fruit</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="{{ asset('frontend') }}/img/categories/cat-2.jpg">
+                            <h5><a href="#">Dried Fruit</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="{{ asset('frontend') }}/img/categories/cat-3.jpg">
+                            <h5><a href="#">Vegetables</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="{{ asset('frontend') }}/img/categories/cat-4.jpg">
+                            <h5><a href="#">drink fruits</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="{{ asset('frontend') }}/img/categories/cat-5.jpg">
+                            <h5><a href="#">drink fruits</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Categories Section End -->
     <!-- Hero Section Begin -->
     <section class="hero">
         <div class="container">
@@ -215,19 +249,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg">
-                        <div class="hero__text">
-                            <span>FRUIT FRESH</span>
-                            <h2>Vegetable <br />100% Organic</h2>
-                            <p>Free Pickup and Delivery Available</p>
-                            <a href="#" class="primary-btn">SHOP NOW</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Hero Section End -->
+                     {{-- have something part in the index file --}}
 
     @yield('frontend_content')
 
@@ -238,7 +260,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.html"><img src="{{ asset('frontent') }}/{{ asset('frontent') }}/{{ asset('frontent') }}/img/logo.png" alt=""></a>
+                            <a href="./index.html"><img src="{{ asset('frontend') }}/img/logo.png" alt=""></a>
                         </div>
                         <ul>
                             <li>Address: 60-49 Road 11378 New York</li>
@@ -289,8 +311,8 @@
                 <div class="col-lg-12">
                     <div class="footer__copyright">
                         <div class="footer__copyright__text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
                         <div class="footer__copyright__payment"><img src="{{ asset('frontent') }}/img/payment-item.png" alt=""></div>
                     </div>
                 </div>
@@ -299,15 +321,15 @@
     </footer>
     <!-- Footer Section End -->
 
-    <!-- Js Plugins -->
-    <script src="{{ asset('frontent') }}/{{ asset('frontend') }}/js/jquery-3.3.1.min.js"></script>
-    <script src="{{ asset('frontent') }}/{{ asset('frontend') }}/js/bootstrap.min.js"></script>
-    <script src="{{ asset('frontent') }}/{{ asset('frontend') }}/js/jquery.nice-select.min.js"></script>
-    <script src="{{ asset('frontent') }}/{{ asset('frontend') }}/js/jquery-ui.min.js"></script>
-    <script src="{{ asset('frontent') }}/{{ asset('frontend') }}/js/jquery.slicknav.js"></script>
-    <script src="{{ asset('frontent') }}/{{ asset('frontend') }}/js/mixitup.min.js"></script>
-    <script src="{{ asset('frontent') }}/{{ asset('frontend') }}/js/owl.carousel.min.js"></script>
-    <script src="{{ asset('frontent') }}/{{ asset('frontend') }}/js/main.js"></script>
+      <!-- Js Plugins -->
+  <script src="{{ asset('frontent') }}/js/jquery-3.3.1.min.js"></script>
+  <script src="{{ asset('frontent') }}/js/bootstrap.min.js"></script>
+  <script src="{{ asset('frontent') }}/js/jquery.nice-select.min.js"></script>
+  <script src="{{ asset('frontent') }}/js/jquery-ui.min.js"></script>
+  <script src="{{ asset('frontent') }}/js/jquery.slicknav.js"></script>
+  <script src="{{ asset('frontent') }}/js/mixitup.min.js"></script>
+  <script src="{{ asset('frontent') }}/js/owl.carousel.min.js"></script>
+  <script src="{{ asset('frontent') }}/js/main.js"></script>
 
 
 

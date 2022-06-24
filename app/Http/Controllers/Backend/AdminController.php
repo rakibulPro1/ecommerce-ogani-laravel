@@ -11,7 +11,7 @@ class AdminController extends Controller
 {
     public function showAdminLogin()
     {
-        return view('backend.admin.admin_login');
+        return view('admin.admin_login');
     }
     public function adminLogin(Request $request){
         $request->validate([

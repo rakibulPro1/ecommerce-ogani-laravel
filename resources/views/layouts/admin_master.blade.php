@@ -19,6 +19,8 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('backend') }}/css/sb-admin-2.min.css" rel="stylesheet">
+     <!-- data tables -->
+     <link href="{{ asset('backend') }}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 
     <style>
@@ -50,20 +52,32 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link" href= {{ route('dashboard') }}>
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span >Dashboard</span></a>
             </li>
+             <!-- Divider -->
+              <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href= {{ url('/') }}>
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Visit Site</span></a>
+            </li>
+             <!-- Divider -->
+            
+
+             <!-- Nav Item - Visit site -->
+             <li class="nav-item">
+                 <a class="nav-link" href= {{ route('admin.category') }}>
+                     <i class="fas fa-fw fa-tachometer-alt"></i>
+                     <span>Category</span></a>
+             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>
-
+          
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -367,7 +381,7 @@
                 <!--Main Content start -->
                 <div class="container-fluid">
 
-                   @yield('content');
+                   @yield('admin_content');
 
                 </div>
                 <!-- Main Content End -->
@@ -425,6 +439,13 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('backend') }}/js/sb-admin-2.min.js"></script>
+
+     <!-- Page level plugins -->
+     <script src="{{ asset('backend') }}/vendor/datatables/jquery.dataTables.min.js"></script>
+     <script src="{{ asset('backend') }}/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+ 
+     <!-- Page level custom scripts -->
+     <script src="{{ asset('backend') }}/js/demo/datatables-demo.js"></script>
 
 </body>
 
